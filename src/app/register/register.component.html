@@ -10,15 +10,15 @@
                                   <input #newTodo type="text" name="description">
                                   <div class="ajouter" (click)="addTodo(newTodo.value)">Ajouter</div>
                                 </form> -->
-    <form action="">
-      <label class="label">Nom</label>
-      <input class="input" type="text" required>
-      <label for="description" class="description">Prénom</label>
-      <input class="input" type="text" required>
-      <label class="label">Email</label>
-      <input class="input" type="email" required>
-      <label for="description" class="description">Password</label>
-      <input class="input" type="text" required>
+    <form (ngSubmit)="onSubmit(formulaire)" #formulaire="ngForm" action="">
+      <label for="nom" id="nom" class="label">Nom</label>
+      <input ngModel name="name" id="name" class="input" type="text" required>
+      <label for="prenom" id="prenom" class="description">Prénom</label>
+      <input ngModel class="input" name="prenom" id="prenom" type="text" required>
+      <label for="mail" id="mail" class="label">Email</label>
+      <input ngModel class="input" name="mail" id="mail" type="email" required>
+      <label for="password" id="password" class="label">Password</label>
+      <input ngModel class="input" name="password" id="password" type="password" required>
 
       <button class="ajouter" type="submit" id="btn">S'inscrire</button>
     </form>

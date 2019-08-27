@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from '../models/task.model';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { AuthService } from '../services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -38,33 +39,6 @@ export class HomepageComponent implements OnInit {
     size:'25 ans'
   }]
 
-  // todos = [
-  //   {
-  //     titre: 'Appeler Mamie',
-  //     description:'mamie a laissé un message sur le repondeur je dois la rappeler',
-  //     done: true,
-  //     delete: false
-  //   },
-  //   {
-  //     titre: 'Changer mot de passe ',
-  //     description:'changer mot de passe pour sécuriser mails',
-  //     done: false,
-  //     delete: false
-  //   },
-  //   {
-  //     titre: 'Nettoyer la maison',
-  //     description:'bien insister dans la cuisine',
-  //     done: false,
-  //     delete: false
-  //   },
-  //   {
-  //     titre: 'Acheter croquettes',
-  //     description:'Passer a match sinon Gus va avoir faim',
-  //     done: false,
-  //     delete: false
-  //   },
-
-  // ];
 
   todos = [];
 

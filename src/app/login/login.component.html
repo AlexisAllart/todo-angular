@@ -3,12 +3,15 @@
   <div class="container">
     <h3>Connexion</h3>
 
-    <form action="">
-      <label class="label">Email</label>
-      <input class="input" type="text" required>
-      <label for="description" class="description">Password</label>
-      <input class="input" type="text" required>
-      <button class="ajouter" type="submit" id="btn">Connexion</button>
+    <form (ngSubmit)="onSubmit(formulaire)" #formulaire="ngForm" class="form-group"  action="">
+
+      <label for="mail" id="mail" class="label">Email</label>
+      <input ngModel name="mail" id="mail" class="input" type="mail" class="form-control" required>
+
+      <label for="password" id="password" class="label">Password</label>
+      <input ngModel name="password" id="password" type="password" class="form-control" class="input" type="text" required>
+
+      <button type="submit" class="ajouter" type="submit" id="btn">Connexion</button>
     </form>
   </div>
 

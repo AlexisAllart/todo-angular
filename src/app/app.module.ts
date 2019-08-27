@@ -14,11 +14,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AuthService } from './services/auth.service';
-import { ServerService } from './services/server.service';
 
 // Services
-
+import { AuthService } from './services/auth.service';
+import { ServerService } from './services/server.service';
 
 
 @NgModule({

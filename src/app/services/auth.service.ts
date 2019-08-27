@@ -41,6 +41,7 @@ export class AuthService {
             // };
             const userData = this.user_id;
             localStorage.setItem('id', this.user_id);
+            this.router.navigate(['/']);
           }
         });
       }

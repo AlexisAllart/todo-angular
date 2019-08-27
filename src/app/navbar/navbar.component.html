@@ -1,4 +1,5 @@
-<div *ngIf="authService.isLoggedIn | async as isLoggedIn else noLogin">
+<!-- <div *ngIf="authService.isLoggedIn | async as isLoggedIn else noLogin"> -->
+<div>
     <nav class="navbar">
         <h1 routerLink="/">{{title}}</h1>
         <div class="user">
@@ -7,6 +8,8 @@
         </div>
     </nav>
 </div>
+
+
 
 <ng-template #noLogin class="navbar">
     <h1 routerLink="/">{{title}}</h1>

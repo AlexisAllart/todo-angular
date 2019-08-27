@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../models/task.model';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { AuthService } from '../services/auth.service';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -21,6 +20,28 @@ import { HttpClientModule } from '@angular/common/http';
   ]
 })
 export class HomepageComponent implements OnInit {
+
+  // constructor(private http:HttpClient) { 
+
+  //   this.http.get('http://localhost:8000/task/list/'+user_id)
+  //   return this.http;
+  // }
+
+  
+   
+  state = [
+    {
+        name: 'en cours'
+    },
+    {
+        name: 'a faire'
+    },
+    {
+      name: 'fini'
+    }
+];
+    
+
 
   search='';
   
@@ -41,6 +62,7 @@ export class HomepageComponent implements OnInit {
 
 
   todos = [];
+  
 
   // addTodo(newTodotitre, newTodoDescription){
   //   var newTodo = {
@@ -53,7 +75,7 @@ export class HomepageComponent implements OnInit {
   // }
 
 
-  constructor(private authService: AuthService) { }
+  constructor() { }
 
   ngOnInit() {
   }

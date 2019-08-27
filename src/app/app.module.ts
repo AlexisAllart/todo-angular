@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './pipe/filter.pipe';
 
 import {
   FormsModule,
@@ -27,7 +28,8 @@ import { ServerService } from './services/server.service';
     LoginComponent,
     RegisterComponent,
     HomepageComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

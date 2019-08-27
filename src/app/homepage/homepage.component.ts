@@ -20,6 +20,22 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class HomepageComponent implements OnInit {
 
+  search='';
+  
+
+  folderObjs=[{
+    name:'flo mdr',
+    size:'24 ans'
+  },{
+    name:'wahiba <3',
+    size:'36 ans'
+  },{
+    name:'alex^^',
+    size:'33 ans'
+  },{
+    name:'natacha <3',
+    size:'25 ans'
+  }]
 
   // todos = [
   //   {

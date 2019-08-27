@@ -161,3 +161,76 @@ th {
 .task {
     color: #fc6d42;
 }
+
+/* searchbar  */
+
+.search-form {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+  }
+  
+  .search-box input[type="text"] {
+    border: none;
+    background: none;
+    z-index: 1;
+    width: 25px;
+    height: 17px;
+    transition: all 0.25s ease-in 0.25s;
+    color: transparent;
+    font-size: 0.75rem;
+    line-height: 25px;
+  }
+  .search-box input[type="text"]:hover {
+    cursor: pointer;
+  }
+  .search-box input[type="text"]:hover:focus {
+    cursor: text;
+  }
+  .search-box input[type="text"]:hover + span {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .search-box input[type="text"]:focus {
+    width: 250px;
+    padding: 0 15px;
+    outline: none;
+    color: black;
+    background: none;
+  }
+  .search-box input[type="text"]:focus + span {
+    width: 250px;
+    height: 20px;
+    border: none;
+    background: #ebeff1;
+  }
+  .search-box input[type="text"]:focus + span::before {
+    width: 2px;
+    opacity: 0;
+    transition: all 0.25s ease-in;
+  }
+  .search-box input[type="text"] + span {
+    z-index: -1;
+    position: absolute;
+    border: 2px solid #948c8c;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    transition: all 0.25s ease-in 0.25s;
+    border-radius: 25px;
+    left: 0px;
+  }
+  .search-box input[type="text"] + span::before {
+    transition: all 0.25s ease-in 0.5s;
+    transform-origin: left top;
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    border-radius: 5px;
+    background: #948c8c;
+    transform: rotate(45deg) translate(26px, -2px);
+    top: -9px;
+    left: -9px;
+  }
+  

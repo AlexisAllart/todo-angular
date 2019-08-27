@@ -3,7 +3,7 @@
 </div>
 
 <ng-template #noLogin>
-  <nav class="navbar">
+  <nav class="navbar" >
     <h1 routerLink="/">{{title}}</h1>
     <div class="user">
       <a class="button-profil" href="" routerLink="/user-edit">{{ profil }}</a>
@@ -13,7 +13,7 @@
 </ng-template>
 <!-- *ngIf="inscription" -->
 <!-- [style.display]="isConnected?'none':'block'" -->
-<nav class="navbar" >
+<nav class="navbar" [style.display]="isConnected?'none':'block'" >
   <h1 routerLink="/">{{title}}</h1>
   <div class="user">
     <a class="button-profil" href="" routerLink="/register">{{ inscription }}</a>

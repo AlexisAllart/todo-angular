@@ -2,6 +2,20 @@
 
         <app-navbar></app-navbar>
         <div class="form-todo">
+            <div class="search-form" >
+                    <div class="search-box">
+                        <input [(ngModel)]="search" type="text" />
+                        <span></span>
+                    </div>
+            </div>
+            <!-- <div *ngFor="let f of (folderObjs | filter:search) as folder">
+                    {{f.name}} {{f.size}}
+
+            </div>
+
+            <div *ngIf="(folderObjs | filter:search).length 1">
+                Not Found
+            </div> -->
           <div class="formulaire">
             <h3>Ajouter une nouvelle tâche</h3>
             <!-- <form #newTodo action="">
@@ -19,6 +33,7 @@
       
               <button class="ajouter" type="submit" id="btn">Ajouter</button>
             </form>
+           
           </div>
       
           <!-- newTodo.value='' -->

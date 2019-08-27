@@ -26,8 +26,8 @@
               <div class="ajouter" (click)="addTodo(newTodo.value)">Ajouter</div>
             </form> -->
             <form (ngSubmit)="onSubmit(contactForm.form.value)" #contactForm="ngForm" action="">
-              <label for="titre" class="label">Titre</label>
-              <input #titre="ngModel" id="titre" class="input" type="text" [(ngModel)]="todos.title" name="titre" required>
+              <label for="title" class="label">Titre</label>
+              <input #title="ngModel" id="title" class="input" type="text" [(ngModel)]="todos.title" name="title" required>
               <label for="description" class="description">Description</label>
               <input #description="ngModel" id="description" class="input" type="text" [(ngModel)]="todos.description" name="description" required>
       
@@ -45,7 +45,7 @@
               <div class="titres">
                   <p class="tasks">Titre</p>
                   <p class="tasks">Description</p>
-                  <p class="tasks">Fini</p>
+                  <p class="tasks">Etat</p>
                   <p class="tasks">Actions</p>
                 </div>
             
@@ -68,7 +68,7 @@
                     </tr>
                   </table> -->
                   <div class="container-a-faire">
-                    <p class="tasks">{{todo.titre}}</p>
+                    <p class="tasks">{{todo.title}}</p>
                     <p class="tasks">
                       {{todo.description }}</p>
                     <p class="tasks">{{todo.done ? '&#10003;' : '&#10005;'}}</p>

@@ -91,8 +91,11 @@ export class HomepageComponent implements OnInit {
   onSubmit(value: any){
     this.todos.unshift(
       new Task(
+        value.id,
+        value.user_id,
         value.title,
         value.description,
+        value.status,
       )
     );
   }

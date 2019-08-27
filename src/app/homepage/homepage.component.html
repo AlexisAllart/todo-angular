@@ -13,7 +13,7 @@
             </form> -->
             <form (ngSubmit)="onSubmit(contactForm.form.value)" #contactForm="ngForm" action="">
               <label for="titre" class="label">Titre</label>
-              <input #titre="ngModel" id="titre" class="input" type="text" [(ngModel)]="todos.titre" name="titre" required>
+              <input #titre="ngModel" id="titre" class="input" type="text" [(ngModel)]="todos.title" name="titre" required>
               <label for="description" class="description">Description</label>
               <input #description="ngModel" id="description" class="input" type="text" [(ngModel)]="todos.description" name="description" required>
       

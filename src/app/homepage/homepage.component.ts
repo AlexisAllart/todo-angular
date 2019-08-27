@@ -69,13 +69,13 @@ export class HomepageComponent implements OnInit {
 
 
   deleteTodo(todos){
-    this.todos = this.todos.filter(t => t.titre !== todos.titre);
+    this.todos = this.todos.filter(t => t.title !== todos.title);
   }
 
   onSubmit(value: any){
     this.todos.unshift(
       new Task(
-        value.titre,
+        value.title,
         value.description,
       )
     );

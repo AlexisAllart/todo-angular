@@ -1,0 +1,53 @@
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height:70vh;
+    padding-top:30px;
+}
+
+h3 {
+    text-align: center;
+    color: #fc6d42;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    
+}
+
+.container {
+    /* background-color: blue; */
+    border:1px solid #ddcfbd;
+    width:40%;
+    border-radius:40px;
+    height:95vh;
+}
+
+label {
+    color: #fc6d42;
+    text-align: left;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+input {
+    border: 1px solid #f1baa9;
+    padding: 10px 10px;
+    /* width: 70%; */
+    outline: #fc6d42;
+}
+
+.ajouter {
+    background-color : #fc6d42;
+    color: white;
+    padding: 4px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

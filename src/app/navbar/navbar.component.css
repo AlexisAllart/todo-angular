@@ -1,0 +1,22 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fc6d42;
+}
+
+h1 {
+    color: white;
+    padding-left:20px;
+}
+
+.button-profil {
+    background-color: white;
+    color: #fc6d42;
+    padding:11px;
+    border-radius:20px;
+    margin: 10px;
+    text-decoration: none;
+}
+

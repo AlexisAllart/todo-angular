@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../models/task.model';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-homepage',
@@ -78,7 +79,7 @@ export class HomepageComponent implements OnInit {
   // }
 
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }

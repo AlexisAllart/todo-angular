@@ -1,14 +1,14 @@
-<div class="body">
+<app-navbar></app-navbar>
+<div *ngIf="authService.isLoggedIn | async as isLoggedIn else noLogin" class="body">
 
-        <app-navbar></app-navbar>
-        <div class="form-todo">
-            <div class="search-form" >
-                    <div class="search-box">
-                        <input [(ngModel)]="search" type="text" />
-                        <span></span>
-                    </div>
+    <div class="form-todo">
+        <div class="search-form">
+            <div class="search-box">
+                <input [(ngModel)]="search" type="text" />
+                <span></span>
             </div>
-            <!-- <div *ngFor="let f of (folderObjs | filter:search) as folder">
+        </div>
+        <!-- <div *ngFor="let f of (folderObjs | filter:search) as folder">
                     {{f.name}} {{f.size}}
 
             </div>
@@ -16,7 +16,7 @@
             <div *ngIf="(folderObjs | filter:search).length 1">
                 Not Found
             </div> -->
-          <div class="formulaire">
+        <div class="formulaire">
             <h3>Ajouter une nouvelle tâche</h3>
             <!-- <form #newTodo action="">
               <label for="titre">Titre</label>
@@ -26,31 +26,31 @@
               <div class="ajouter" (click)="addTodo(newTodo.value)">Ajouter</div>
             </form> -->
             <form (ngSubmit)="onSubmit(contactForm.form.value)" #contactForm="ngForm" action="">
-              <label for="title" class="label">Titre</label>
-              <input #title="ngModel" id="title" class="input" type="text" [(ngModel)]="todos.title" name="title" required>
-              <label for="description" class="description">Description</label>
-              <input #description="ngModel" id="description" class="input" type="text" [(ngModel)]="todos.description" name="description" required>
-      
-              <button class="ajouter" type="submit" id="btn">Ajouter</button>
+                <label for="title" class="label">Titre</label>
+                <input #title="ngModel" id="title" class="input" type="text" [(ngModel)]="todos.title" name="title" required>
+                <label for="description" class="description">Description</label>
+                <input #description="ngModel" id="description" class="input" type="text" [(ngModel)]="todos.description" name="description" required>
+
+                <button class="ajouter" type="submit" id="btn">Ajouter</button>
             </form>
-           
-          </div>
-      
-          <!-- newTodo.value='' -->
-      
-          <!-- <input type="text" #newTodo> -->
-      
-          <!-- *ngFor="let todo of todos" [@contactsAnimation]="state" -->
-          <div class="container-to-do">
-              <div class="titres">
-                  <p class="tasks">Titre</p>
-                  <p class="tasks">Description</p>
-                  <p class="tasks">Etat</p>
-                  <p class="tasks">Actions</p>
-                </div>
-            
-                <div class="a-faire" *ngFor="let todo of todos" [@contactsAnimation]="state">
-                  <!-- <table>
+
+        </div>
+
+        <!-- newTodo.value='' -->
+
+        <!-- <input type="text" #newTodo> -->
+
+        <!-- *ngFor="let todo of todos" [@contactsAnimation]="state" -->
+        <div class="container-to-do">
+            <div class="titres">
+                <p class="tasks">Titre</p>
+                <p class="tasks">Description</p>
+                <p class="tasks">Etat</p>
+                <p class="tasks">Actions</p>
+            </div>
+
+            <div class="a-faire" *ngFor="let todo of todos" [@contactsAnimation]="state">
+                <!-- <table>
                     <tr>
                       <th>Titre</th>
                       <th>Description</th>
@@ -67,20 +67,26 @@
             
                     </tr>
                   </table> -->
-                  <div class="container-a-faire">
+                <div class="container-a-faire">
                     <p class="tasks">{{todo.title}}</p>
                     <p class="tasks">
-                      {{todo.description }}</p>
+                        {{todo.description }}</p>
                     <p class="tasks">{{todo.done ? '&#10003;' : '&#10005;'}}</p>
                     <button class="delete" (click)="deleteTodo(todo)">Supprimer</button>
-            
-                  </div>
+
                 </div>
-      
-      
-          </div>
-          
-       
+            </div>
+
+
         </div>
-      
-      </div>
+
+
+    </div>
+
+</div>
+
+
+
+<ng-template #noLogin>
+    Connectez-vous ou inscrivez-vous pour continuer !
+</ng-template>

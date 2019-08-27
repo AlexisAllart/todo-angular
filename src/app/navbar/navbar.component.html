@@ -1,22 +1,17 @@
-<div *ngIf="!profil else noLogin">
-  Inscrivez vous pour voir plus d'options
+<div *ngIf="authService.isLoggedIn | async as isLoggedIn else noLogin">
+    <nav class="navbar">
+        <h1 routerLink="/">{{title}}</h1>
+        <div class="user">
+            <a class="button-profil" href="" routerLink="/user-edit">{{ profil }}</a>
+            <a class="button-profil" href="">{{ logout }}</a>
+        </div>
+    </nav>
 </div>
 
-<ng-template #noLogin>
-  <nav class="navbar" >
+<ng-template #noLogin class="navbar">
     <h1 routerLink="/">{{title}}</h1>
     <div class="user">
-      <a class="button-profil" href="" routerLink="/user-edit">{{ profil }}</a>
-      <a class="button-profil" href="">{{ logout }}</a>
+        <a class="button-profil" href="" routerLink="/register">{{ inscription }}</a>
+        <a class="button-profil" href="" routerLink="/login">{{ connexion }}</a>
     </div>
-  </nav>
 </ng-template>
-<!-- *ngIf="inscription" -->
-<!-- [style.display]="isConnected?'none':'block'" -->
-<nav class="navbar" [style.display]="isConnected?'none':'block'" >
-  <h1 routerLink="/">{{title}}</h1>
-  <div class="user">
-    <a class="button-profil" href="" routerLink="/register">{{ inscription }}</a>
-    <a class="button-profil" href="" routerLink="/login">{{ connexion }}</a>
-  </div>
-</nav>
